@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin Panel | Hino</title>
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="fonts/fonttello/css/fontello.css">
+    <link rel="stylesheet" href="fonts/helveticaBold/helveticabold.css">
+    <link rel="stylesheet" href="fonts/helveticaMedium/helveticamedium.css">
+    <link rel="stylesheet" href="fonts/helveticaLight/helveticalight.css">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendor/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/chartjs/Chart.bundle.min.js"></script>
+    <script src="vendor/chartjs/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+    <script src="js/hino.js"></script>
+    
+</head>
+<body>
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+        <header class="sidebar-header">
+            <span class="logo">
+                <a href="#"><img src="img/logo.png" alt="logo"></a>
+            </span>
+        </header>
+        
+        <nav class="sidebar-navigation">
+            <ul class="menu">
+
+                <li class="menu-item ">
+                    <a href="index.html" class="menu-link ">
+                        <span class="icon-dashboardicon-"></span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="dealer.html" class="menu-link ">
+                        <span class="icon-dealericon-"></span>
+                        <span class="title">Dealer</span>
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="karyawan.html" class="menu-link">
+                        <span class="icon-karyawanicon-"></span>
+                        <span class="title">Karyawan</span>
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="absensi.html" class="menu-link">
+                        <span class="icon-absensiicon-"></span>
+                        <span class="title">Absensi</span>
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="" class="menu-link">
+                        <span class="icon-rekrutmenicon-"></span>
+                        <span class="title">Rekruitmen</span>
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="" class="menu-link">
+                        <span class="icon-performanceicon-"></span>
+                        <span class="title">Performance</span>
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="training.html" class="menu-link active">
+                        <span class="icon-trainingicon-"></span>
+                        <span class="title">Training</span>
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="" class="menu-link">
+                        <span class="icon-buletinicon-"></span>
+                        <span class="title">Buletin</span>
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="" class="menu-link">
+                        <span class="icon-laporanicon-"></span>
+                        <span class="title">Laporan</span>
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="" class="menu-link">
+                        <span class="icon-perusahaanicon-"></span>
+                        <span class="title">Perusahaan</span>
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="" class="menu-link">
+                        <span class="icon-pengaturanicon-"></span>
+                        <span class="title">Pengaturan</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <!-- END Sidebar -->
+
+    <!-- Topbar -->
+    <header class="topbar">
+
+        <div class="topbar-left">
+            <div class="topbar-search d-none d-md-block">
+                <i class="searchicon-"></i>
+                <input type="text" placeholder="Pencarian.." class="input-search">
+            </div>
+            <div class="topbar-divider"></div>
+        </div>
+
+        <div class="topbar-right">
+            <!-- avatar -->
+            <div class="box-avatar">
+                <img class="avatar" src="img/avatar/1.jpg" alt="...">
+                <span class="avatar-name">Ahmad Chaidir</span>
+                <span class="avatar-job">HRD Manager</span>
+                
+                <span class="topbar-btn" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-angle-down arrow"></i>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </span>
+
+            </div>
+
+            <div class="topbar-divider"></div>            
+            <ul class="topbar-btns">
+                <!-- message -->
+                <li class="dropdown">
+                    <span class="topbar-btn" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="icon-mailicon- icon-mail"></i>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </span>
+                </li>
+                
+                <!-- notif -->
+                <li class="dropdown">
+                    <span class="topbar-btn has-new " id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="icon-notificationicon- icon-notif"></i>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!-- END Topbar -->
+    <!-- Main Container -->
+
+    <main class="main-container">
+        <div class="main-content">
+            <div class="row">
+
+                <div class="col-md-6">
+
+                    <div class="title-dealer">
+                        <h1 class="title-name-dealer">Training</h1>
+                        <p class="title-welcome-dealer">Training HR Hino</p>
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 text-right">
+
+                    <button class="btn btn-w-md btn-danger btn-training">Tambah Training</button>
+
+                    <button class="btn btn-w-md btn-gray btn-filter-training">Filter Training<i class="fa fa-angle-down arrow-2"></i></button>
+                </div>
+
+                <div class="divider-4 divider-training"></div>
+
+                <div class="col-md-12">
+                    <div class="header-action training-action">
+                        <nav class="nav">
+                            <a class="nav-link active" href="#">Training Need Analysis</a>
+                            <a class="nav-link" href="#">Training Plan</a>
+                            <a class="nav-link" href="#">Modul Training</a>
+                            <a class="nav-link" href="#">Training Record</a>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="col-12">
+
+                    <div class="card-table">
+                        <h4 class="card-title"></h4>
+        
+                        <div class="card-body-table">
+        
+                        <table class="table table-dealer">
+                            <thead class="bg-gray">
+                            <tr>
+                                <th style="width: 5px;">
+                                    <label class="container">
+                                        <input type="checkbox" onClick="toggle(this)">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </th>
+                                <th>Training Subject</th>
+                                <th>Participants</th>
+                                <th>Department</th>
+                                <th>Position</th>
+                                <th>Gap</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">
+                                    <label class="container">
+                                        <input type="checkbox" name="foo">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </th>
+                                <td>SOI (Related Department)</td>
+                                <td>Indah Dwi, Rohimah Sari, 5+</td>
+                                <td>Ampoule</td>
+                                <td>Sp Ampoule</td>
+                                <td>-1</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <label class="container">
+                                        <input type="checkbox" name="foo">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </th>
+                                <td>ISO 900001:2008</td>
+                                <td>Sri Winarti</td>
+                                <td>Ampoule</td>
+                                <td>SP Ampoule</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <label class="container">
+                                        <input type="checkbox" name="foo">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </th>
+                                <td>Product Knowledge</td>
+                                <td>Yekti Bin, Michael Flarup, 2+</td>
+                                <td>Ampoule</td>
+                                <td>SP Ampoule</td>
+                                <td>-1</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <label class="container">
+                                        <input type="checkbox" name="foo">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </th>
+                                <td>UU Tenaga Kerja</td>
+                                <td>Sugiono, Bambang Winarso</td>
+                                <td>Ampoule</td>
+                                <td>Packer</td>
+                                <td>-1</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <label class="container">
+                                        <input type="checkbox" name="foo">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </th>
+                                <td>APAR</td>
+                                <td>Sukatmi, Sri Murmami</td>
+                                <td>Ampoule</td>
+                                <td>SP Ampoule</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <label class="container">
+                                        <input type="checkbox" name="foo">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </th>
+                                <td>Artwork</td>
+                                <td>Yeti Perawati, Margaret</td>
+                                <td>Ampoule</td>
+                                <td>Packer</td>
+                                <td>-14</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <label class="container">
+                                        <input type="checkbox" name="foo">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </th>
+                                <td>Change Control</td>
+                                <td>Muhammad Mumsida</td>
+                                <td>Ampoule</td>
+                                <td>SP Ampoule</td>
+                                <td>-1</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <label class="container">
+                                        <input type="checkbox" name="foo">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </th>
+                                <td>Company Regulation</td>
+                                <td>Jackson Budi, Susetyo N</td>
+                                <td>Ampoule</td>
+                                <td>SP Ampoule</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <label class="container">
+                                        <input type="checkbox" name="foo">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </th>
+                                <td>K3</td>
+                                <td>Fatiham Az Zahra</td>
+                                <td>Ampoule</td>
+                                <td>SP Ampoule</td>
+                                <td>-1</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        </div>
+                        
+                    </div>
+                    </div>
+
+                    <nav class="col-md-12">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                            </li>
+                            <li class="page-item active">
+                            <a class="page-link" href="#">1</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                            </li>
+                        </ul>
+                    </nav>
+
+
+
+            </div>
+        </div>
+    </main>
+
+    <!-- End Container -->
+
+</body>
+</html>

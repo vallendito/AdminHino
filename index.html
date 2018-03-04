@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin Panel | Hino</title>
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="fonts/fonttello/css/fontello.css">
+    <link rel="stylesheet" href="fonts/helveticaBold/helveticabold.css">
+    <link rel="stylesheet" href="fonts/helveticaMedium/helveticamedium.css">
+    <link rel="stylesheet" href="fonts/helveticaLight/helveticalight.css">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendor/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/chartjs/Chart.bundle.min.js"></script>
+    <script src="vendor/chartjs/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+    <script src="js/hino.js"></script>
+    
+</head>
+<body>
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+        <header class="sidebar-header">
+            <span class="logo">
+                <a href="#"><img src="img/logo.png" alt="logo"></a>
+            </span>
+        </header>
+        
+        <nav class="sidebar-navigation">
+            <ul class="menu">
+
+                <li class="menu-item ">
+                    <a href="" class="menu-link active">
+                        <span class="icon-dashboardicon-"></span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="dealer.html" class="menu-link">
+                        <span class="icon-dealericon-"></span>
+                        <span class="title">Dealer</span>
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="karyawan.html" class="menu-link">
+                        <span class="icon-karyawanicon-"></span>
+                        <span class="title">Karyawan</span>
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="absensi.html" class="menu-link">
+                        <span class="icon-absensiicon-"></span>
+                        <span class="title">Absensi</span>
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="" class="menu-link">
+                        <span class="icon-rekrutmenicon-"></span>
+                        <span class="title">Rekruitmen</span>
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="" class="menu-link">
+                        <span class="icon-performanceicon-"></span>
+                        <span class="title">Performance</span>
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="training.html" class="menu-link">
+                        <span class="icon-trainingicon-"></span>
+                        <span class="title">Training</span>
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="" class="menu-link">
+                        <span class="icon-buletinicon-"></span>
+                        <span class="title">Buletin</span>
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="" class="menu-link">
+                        <span class="icon-laporanicon-"></span>
+                        <span class="title">Laporan</span>
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="" class="menu-link">
+                        <span class="icon-perusahaanicon-"></span>
+                        <span class="title">Perusahaan</span>
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="" class="menu-link">
+                        <span class="icon-pengaturanicon-"></span>
+                        <span class="title">Pengaturan</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <!-- END Sidebar -->
+
+    <!-- Topbar -->
+    <header class="topbar">
+
+        <div class="topbar-left">
+            <div class="topbar-search d-none d-md-block">
+                <i class="searchicon-"></i>
+                <input type="text" placeholder="Pencarian.." class="input-search">
+            </div>
+            <div class="topbar-divider"></div>
+        </div>
+
+        <div class="topbar-right">
+            <!-- avatar -->
+            <div class="box-avatar" style="cursor:pointer" onclick="toggleNav()">
+                <!-- <span style="cursor:pointer" onclick="openNav()"></span> -->
+                <img class="avatar" src="img/avatar/1.jpg" alt="...">
+                <span class="avatar-name">Ahmad Chaidir</span>
+                <span class="avatar-job">HRD Manager</span>
+                
+                <span class="topbar-btn" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-angle-down arrow"></i>
+                </span>
+
+            </div>
+
+            <div class="topbar-divider"></div>            
+            <ul class="topbar-btns">
+                <!-- message -->
+                <li class="dropdown">
+                    <span class="topbar-btn" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="icon-mailicon- icon-mail"></i>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </span>
+                </li>
+                
+                <!-- notif -->
+                <li class="dropdown">
+                    <span class="topbar-btn has-new " id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="icon-notificationicon- icon-notif"></i>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!-- END Topbar -->
+    <!-- Main Container -->
+
+    <main class="main-container">
+        <div class="main-content">
+            <div class="row">
+
+                <div class="col-md-9">
+                    <h1 class="title-name">Halo Ahmad,</h1>
+                    <p class="title-welcome">Selamat datang di dashboard HR Management System</p>
+                </div>
+                <div class="col-md-3 text-right">
+                    <button class="btn btn-w-md btn-danger ">Tambahkan Widget</button>
+                </div>
+
+            <div id="owl-demo" class="owl-carousel owl-theme variable-width">
+                
+                <div class="item" style="width:383px">
+                    <div class="card">
+                        <header class="card-header">
+                            <h4 class="card-title">Hari Ini</h4>
+                            <span class="dot-header-1"></span>
+                            <ul class="card-controls">
+                                <li class="dropdown">
+                                    <a data-toggle="dropdown" href="#"><i class="ti-more-alt more-alt"></i></a>
+                                </li>
+                            </ul>
+                        </header>
+
+                        <div class="card-body">
+                            
+                            <div class="card-body-content flexbox">
+                                <i class="icon-birthdayicon- icon-birthday"></i>
+                                    <div class="title-content">
+                                        <h4 class="title-event-content">Ulang Tahun</h4>
+                                        <p class="title-name-content">Sandiaga Uno(58th)</p>
+                                    </div>
+                                    <div class="text-right">
+                                        <i class="icon-arrowicon- arrow-icon"></i>
+                                    </div>
+                            </div>
+                            <div class="divider-2"></div>
+
+                            <div class="card-body-content flexbox">
+                                <i class="icon-birthdayicon- icon-birthday"></i>
+                                    <div class="title-content-2">
+                                        <h4 class="title-event-content">Anniversary</h4>
+                                        <p class="title-name-content">20th Hino Jakarta Selatan</p>
+                                    </div>
+                                    <div class="text-right">
+                                        <i class="icon-arrowicon- arrow-icon"></i>
+                                    </div>
+                            </div>
+                            <div class="divider-2"></div>
+
+                            <div class="card-body-content flexbox">
+                                <i class="icon-birthdayicon- icon-birthday"></i>
+                                    <div class="title-content-3">
+                                        <h4 class="title-event-content">Event</h4>
+                                        <p class="title-name-content">Gerak Jalan Sehat Hino</p>
+                                    </div>
+                                    <div class="text-right">
+                                        <i class="icon-arrowicon- arrow-icon"></i>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item" style="width:383px">
+                    <div class="card">
+                        <header class="card-header">
+                            <h4 class="card-title">Lowongan</h4>
+                            <span class="dot-header-2"></span>
+                            <ul class="card-controls">
+                                <li class="dropdown">
+                                    <a data-toggle="dropdown" href="#"><i class="ti-more-alt more-alt"></i></a>
+                                </li>
+                            </ul>
+                        </header>
+                        <div class="card-body">
+
+                            <div class="card-body-content flexbox">
+                                <i class="icon-humanicon- icon-admin"></i>
+                                    <div class="title-content-4">
+                                        <h4 class="title-event-content">Administrator</h4>
+                                        <p class="title-name-content">2 Lowongan</p>
+                                    </div>
+                                    <div class="text-right">
+                                        <i class="icon-arrowicon- arrow-icon"></i>
+                                    </div>
+                            </div>
+                            <div class="divider-2"></div>
+
+                            <div class="card-body-content flexbox">
+                                <i class="icon-humanicon- icon-admin"></i>
+                                    <div class="title-content-5">
+                                        <h4 class="title-event-content">Security</h4>
+                                        <p class="title-name-content">10 Lowongan</p>
+                                    </div>
+                                    <div class="text-right">
+                                        <i class="icon-arrowicon- arrow-icon"></i>
+                                    </div>
+                            </div>
+                            <div class="divider-2"></div>
+
+                            <div class="card-body-content flexbox">
+                                    <i class="icon-humanicon- icon-admin"></i>
+                                        <div class="title-content-6">
+                                            <h4 class="title-event-content">General Manager</h4>
+                                            <p class="title-name-content">1 Lowongan</p>
+                                        </div>
+                                        <div class="text-right">
+                                            <i class="icon-arrowicon- arrow-icon"></i>
+                                        </div>
+                                </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item" style="width:210px">
+                    <div class="card">
+                        <header class="card-header">
+                            <h4 class="card-title">Absensi</h4>
+                            <span class="dot-header-3"></span>
+                            <ul class="card-controls">
+                                <li class="dropdown">
+                                    <a data-toggle="dropdown" href="#"><i class="ti-more-alt more-alt"></i></a>
+                                </li>
+                            </ul>
+                        </header>
+
+                        <div class="card-body">
+                            <div class="content-absen">
+                                <!-- up -->
+                                    <div class="box-up">
+                                        <p class="text-absen">Sakit</p>
+                                        <p class="text-absen">Izin</p>
+                                    </div>
+
+                                    <div class="box-value">
+                                        <h4 class="text-value">4</h4>
+                                        <h4 class="text-value">9</h4>
+                                    </div>
+
+                                    <div class="border-1"></div>
+                                    <div class="border-2"></div>
+                                <!-- down -->
+                                    <div class="box-up">
+                                        <p class="text-absen">Cuti</p>
+                                        <p class="text-absen">Alpha</p>
+                                    </div>
+
+                                    <div class="box-value">
+                                        <h4 class="text-value">23</h4>
+                                        <h4 class="text-value">0</h4>
+                                    </div>
+
+                                    
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item" style="width:383px">
+                    <div class="card">
+                        <header class="card-header">
+                            <h4 class="card-title">Hari Ini</h4>
+                            <span class="dot-header-1"></span>
+                            <ul class="card-controls">
+                                <li class="dropdown">
+                                    <a data-toggle="dropdown" href="#"><i class="ti-more-alt more-alt"></i></a>
+                                </li>
+                            </ul>
+                        </header>
+
+                        <div class="card-body">
+                            
+                            <div class="card-body-content flexbox">
+                                <i class="icon-birthdayicon- icon-birthday"></i>
+                                    <div class="title-content">
+                                        <h4 class="title-event-content">Ulang Tahun</h4>
+                                        <p class="title-name-content">Sandiaga Uno(58th)</p>
+                                    </div>
+                                    <div class="text-right">
+                                        <i class="icon-arrowicon- arrow-icon"></i>
+                                    </div>
+                            </div>
+                            <div class="divider-2"></div>
+
+                            <div class="card-body-content flexbox">
+                                <i class="icon-birthdayicon- icon-birthday"></i>
+                                    <div class="title-content-2">
+                                        <h4 class="title-event-content">Anniversary</h4>
+                                        <p class="title-name-content">20th Hino Jakarta Selatan</p>
+                                    </div>
+                                    <div class="text-right">
+                                        <i class="icon-arrowicon- arrow-icon"></i>
+                                    </div>
+                            </div>
+                            <div class="divider-2"></div>
+
+                            <div class="card-body-content flexbox">
+                                <i class="icon-birthdayicon- icon-birthday"></i>
+                                    <div class="title-content-3">
+                                        <h4 class="title-event-content">Event</h4>
+                                        <p class="title-name-content">Gerak Jalan Sehat Hino</p>
+                                    </div>
+                                    <div class="text-right">
+                                        <i class="icon-arrowicon- arrow-icon"></i>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item" style="width:383px">
+                        <div class="card">
+                            <header class="card-header">
+                                <h4 class="card-title">Lowongan</h4>
+                                <span class="dot-header-2"></span>
+                                <ul class="card-controls">
+                                    <li class="dropdown">
+                                        <a data-toggle="dropdown" href="#"><i class="ti-more-alt more-alt"></i></a>
+                                    </li>
+                                </ul>
+                            </header>
+                            <div class="card-body">
+    
+                                <div class="card-body-content flexbox">
+                                    <i class="icon-humanicon- icon-admin"></i>
+                                        <div class="title-content-4">
+                                            <h4 class="title-event-content">Administrator</h4>
+                                            <p class="title-name-content">2 Lowongan</p>
+                                        </div>
+                                        <div class="text-right">
+                                            <i class="icon-arrowicon- arrow-icon"></i>
+                                        </div>
+                                </div>
+                                <div class="divider-2"></div>
+    
+                                <div class="card-body-content flexbox">
+                                    <i class="icon-humanicon- icon-admin"></i>
+                                        <div class="title-content-5">
+                                            <h4 class="title-event-content">Security</h4>
+                                            <p class="title-name-content">10 Lowongan</p>
+                                        </div>
+                                        <div class="text-right">
+                                            <i class="icon-arrowicon- arrow-icon"></i>
+                                        </div>
+                                </div>
+                                <div class="divider-2"></div>
+    
+                                <div class="card-body-content flexbox">
+                                        <i class="icon-humanicon- icon-admin"></i>
+                                            <div class="title-content-6">
+                                                <h4 class="title-event-content">General Manager</h4>
+                                                <p class="title-name-content">1 Lowongan</p>
+                                            </div>
+                                            <div class="text-right">
+                                                <i class="icon-arrowicon- arrow-icon"></i>
+                                            </div>
+                                    </div>
+    
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="item" style="width:210px">
+                        <div class="card">
+                            <header class="card-header">
+                                <h4 class="card-title">Absensi</h4>
+                                <span class="dot-header-3"></span>
+                                <ul class="card-controls">
+                                    <li class="dropdown">
+                                        <a data-toggle="dropdown" href="#"><i class="ti-more-alt more-alt"></i></a>
+                                    </li>
+                                </ul>
+                            </header>
+    
+                            <div class="card-body">
+
+                                <div class="content-absen">
+                                    <!-- up -->
+                                        <div class="box-up">
+                                            <p class="text-absen">Sakit</p>
+                                            <p class="text-absen">Izin</p>
+                                        </div>
+    
+                                        <div class="box-value">
+                                            <h4 class="text-value">4</h4>
+                                            <h4 class="text-value">9</h4>
+                                        </div>
+    
+                                        <div class="border-1"></div>
+                                        <div class="border-2"></div>
+                                    <!-- down -->
+                                        <div class="box-up">
+                                            <p class="text-absen">Cuti</p>
+                                            <p class="text-absen">Alpha</p>
+                                        </div>
+    
+                                        <div class="box-value">
+                                            <h4 class="text-value">23</h4>
+                                            <h4 class="text-value">0</h4>
+                                        </div>
+    
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+            </div>
+
+                <div class="col-lg-12">
+                    <div class="divider"></div>
+                </div>
+
+                <!--
+          |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+          | Pie chart
+          |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+          !-->
+          <div class="col-lg-6">
+                <div class="card">
+                    <header class="card-header">
+                        <h4 class="card-title">Statistik</h4>
+                        <span class="dot-header-1"></span>
+                        <ul class="card-controls">
+                            <li class="dropdown">
+                                <a data-toggle="dropdown" href="#"><i class="ti-more-alt more-alt"></i></a>
+                            </li>
+                        </ul>
+                    </header>
+    
+                <div class="card-body">
+                    
+                        <div class="content-stat">
+                            <!-- up -->
+                                <div class="box-stat">
+                                    <p class="text-stat">Total Karyawan</p>
+                                    <p class="text-stat">Jumlah Divisi</p>
+                                </div>
+
+                                <div class="box-value-stat">
+                                    <h4 class="stat-value">135</h4>
+                                    <h4 class="stat-value">10</h4>
+                                    <canvas class="mx-auto" id="chart-pie" width="180" height="180"></canvas>
+                                </div>
+                                <img src="img/avatar/3.jpg" alt="" class="avatar-card">
+                                <img src="img/avatar/4.jpg" alt="" class="avatar-card">
+                                <img src="img/avatar/2.jpg" alt="" class="avatar-card">          
+                        </div>
+                        
+                        <div class="divider-3"></div>
+                        <div class="stat-footer">
+                            <span class="dot-header-5"></span> <span class="text-footer-stat">Karyawan Tetap</span>
+                            <span class="dot-header-7"></span> <span class="text-footer-stat">Karyawan Kontrak</span>
+                        
+                            <p class="dot-header-6"></p> <p class="text-footer-stat-2">Karyawan Paruh Waktu</p>
+                        </div>
+                        
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="card card-inverse card-danger">
+                <header class="card-header">
+                    <h4 class="card-title">Turn Over Rate</h4>
+                    <span class="dot-header-4"></span>
+                    <ul class="card-controls">
+                        <li class="dropdown">
+                            <a data-toggle="dropdown" href="#"><i class="ti-more-alt more-alt"></i></a>
+                        </li>
+                    </ul>
+                </header>
+
+                <div class="card-body">
+                <canvas id="chart-area-1" width="408" height="250"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+        <div id="mySidenav" class="sidenav">
+            <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+           
+                <div class="header-action clean-padding border-bottom">
+                    <nav class="nav">
+                        <a class="nav-link nav-link-qv" href="#">Tugas</a>
+                        <a class="nav-link nav-link-qv active" href="#">Riwayat</a>
+                    </nav>
+                </div>
+
+                <div class="content-qv">
+                    <img src="img/avatar/3.jpg" alt="" class="avatar-card">
+                    <span>Muhammad<span>mengajukan</span></span>
+                    <p>2 jam lalu</p>
+                </div>
+        </div>
+    </div>
+          
+
+            </div>
+        </div>
+    </main>
+
+    
+
+    <!-- End Container -->
+
+    <script>
+
+        // ==============================================
+        // Pie chart
+        //
+        new Chart($("#chart-pie"), {
+          type: 'pie',
+
+          // Data
+          //
+          data: {
+            datasets: [
+              {
+                data: [300, 50, 100],
+                backgroundColor: [
+                  '#d93a2f',
+                  '#eea6a1',
+                  '#e5e8eb'
+                ]
+              }]
+          },
+
+          // Options
+          //
+          options: {
+            responsive: false
+          }
+        });
+
+        // ==============================================
+        // Area chart 1
+        //
+        new Chart($("#chart-area-1"), {
+          type: 'line',
+
+          // Data
+          //
+          data: {
+            labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+            
+            datasets: [
+              {
+                label: "Revenue",
+                backgroundColor: "#ed9e99",
+                borderWidth: 0,
+                borderColor: "#fff",
+                data: [0, 10, 20, 20, 30, 60]
+              }
+            ]
+          },
+
+          // Options
+          //
+          options: {
+            legend: {
+              display: false
+            },
+            scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true,
+                    fontColor: 'white'
+                },
+            }],
+          xAxes: [{
+                ticks: {
+                    fontColor: 'white'
+                },
+            }]
+        } 
+          }
+        });
+    
+    </script>
+
+<script>
+    // function openNav() {
+    //     document.getElementById("mySidenav").style.right = "0";
+    // }
+    
+    // function closeNav() {
+    //     document.getElementById("mySidenav").style.right = "-284px";
+    // }
+    function toggleNav(){
+        var target = $('.sidenav');
+        if(target.hasClass('open')){
+            target.removeClass('open');
+        }else{
+            target.addClass('open');
+        }
+    }
+    </script>
+</body>
+</html>
