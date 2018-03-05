@@ -957,16 +957,26 @@ p.job-karyawan{
     top: 5px;
 }
 
+.nav {
+    position: fixed;
+    padding-top: 50px;
+    background-color: #fff;
+    z-index: 1;
+    width: 100%;
+}
+
 .sidenav {
     height: 100%;
-    width: 284px;
+    width: 300px;
     position: fixed;
     z-index: 1;
     top: 80px;
-    right: -284px;
+    right: -300px;
     background-color: #fff;
     overflow-x: hidden;
     transition: 0.5s;
+    box-shadow: 0px 0 10px rgba(0,0,0,0.08);
+    padding-bottom: 75px;
 }
 
 .sidenav.open {
@@ -1005,4 +1015,29 @@ p.job-karyawan{
 }
 .header-action .nav-link.nav-link-qv {
     padding: 12px 47px;
+}
+.content-qv {
+    padding: 5px 8px;
+    display: flex;
+}
+.qv-p-top {
+    padding-top: 60px;
+}
+.qv-ava {
+    font-family: "helvetica-bold";
+    color: #000;
+}
+.qv-ket {
+    font-family: "helvetica_light";
+    color: #bcbcbc;
+}
+
+p.qv-jam{
+    margin: 0;
+    font-family: "helvetica_light";
+    color: #bcbcbc;
+}
+
+.qv-avatar {
+    margin: 10px 15px;
 }
