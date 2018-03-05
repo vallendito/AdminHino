@@ -1,9 +1,21 @@
 # AdminHino
-Frontend Admin Panel
+Template Frontend Admin Panel
 
 ![alt text](https://github.com/vallendito/AdminHino/blob/master/dashboard.jpg)
 
+Font :
+- Helvetica Light
+- Helvetica Medium
+- Helvetica Bold
+
 Build With :
-- HTML & CSS
-- Bootstrap 3 : https://getbootstrap.com/docs/3.3/ 
+- HTML, CSS & JS
+
+Vendor : 
+- Bootstrap: https://getbootstrap.com/docs/3.3/ 
 - Jquery : https://jquery.com/download/
+- ChartJs: chartjs.org
+- MomentJs: https://momentjs.com/
+- Popper: https://popper.js.org/
+- Font Awesome: https://fontawesome.com/
+- Full Calender: https://fullcalendar.io/
