@@ -19,3 +19,8 @@ Vendor :
 - Popper: https://popper.js.org/
 - Font Awesome: https://fontawesome.com/
 - Full Calender: https://fullcalendar.io/
+
+Contributor :
+- Mentor: https://github.com/Ibnusuhaemy
+- Designer: https://dribbble.com/faizalqurni
+- Developer: https://github.com/vallendito
